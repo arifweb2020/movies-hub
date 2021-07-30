@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../../components/Card/Card'
 
+
 function Trending() {
 
     const [data, setData] = useState([])
+    const [loader,setLoader]=useState(true);
 
     const getData = async () => {
 
@@ -11,6 +13,7 @@ function Trending() {
         const res1 = await res.json();
         console.log(res1.results);
         setData(res1.results)
+        setLoader(false);
 
     }
 
@@ -18,7 +21,7 @@ function Trending() {
         getData();
     }, [])
 
-
+    if(loader) return <p>plz wait ... </p>
     return (
         <>
             <h1>Trending Lists</h1>
@@ -27,15 +30,19 @@ function Trending() {
 
                 {
                     data.map((items) => {
-                        return <Card key={items.id}
+                        return (
+                        
+                        <Card key={items.id}
+                            fulldata={items}
                             id={items.id}
                             poster={items.poster_path}
                             title={items.title || items.name}
                             date={items.first_air_date || items.release_date}
                             media_type={items.media_type}
                             vote_average={items.vote_average}
-
                         />
+                        
+                        )
                     })
                 }
             </div>

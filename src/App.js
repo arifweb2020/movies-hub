@@ -5,6 +5,7 @@ import Trending from './Pages/Trending/Trending';
 import Movies from './Pages/Movies/Movies';
 import Series from './Pages/Series/Series';
 import Search from './Pages/Search/Search';
+import MoviesDetails from './Pages/MoviesDetails/MoviesDetails';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route  path="/movies-list" component={Movies} />
         <Route  path="/tv-series-list" component={Series} />
         <Route  path="/search-list" component={Search} />
+        <Route  path="/movies-detail/:id" component={MoviesDetails} />
 
       </div>
     </Router>
