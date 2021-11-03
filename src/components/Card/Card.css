@@ -1,7 +1,37 @@
+.card{
+    -webkit-transition: all .3s ease-in-out;
+    box-shadow: 3px 3px 5px 6px hsl(0deg 0% 62% / 45%);
+}
+.card:hover{
+        transform: translateY(-10px);
+        cursor: pointer;
+        transition: transform 125ms; 
+}
 .card-title{
-    font-size: 13px !important;
-    color:#3f51b5 !important;
+    font-size: 18px ;
+    color:#3f51b5;
+    font-weight: bold;
+    text-align: center;
 }
 .badge-dark{
     font-size: 14px;
+}
+
+.card-body{
+
+    height: 140px;
+
+}
+
+a , a:hover{
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .card-title{
+        font-size: 14px;
+    }
+    .card-text{
+        font-size: 16px;
+    }
 }
