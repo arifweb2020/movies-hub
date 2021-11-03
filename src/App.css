@@ -9,4 +9,20 @@ body{
 
 .all-page-view{
     margin-top: 124px;
+    margin-bottom: 70px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    border-radius: 10px
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 0px
+}
+
+::-webkit-scrollbar-thumb {
+    background:#3f51b5;
+   
 }
